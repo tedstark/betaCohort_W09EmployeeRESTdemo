@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>A Spring REST Demo</title>
+        <link rel="stylesheet" th:href="@{/bootstrap.css}"/>
+        <!--<link rel="stylesheet" href="../static/bootstrap.css"/>-->
+        <link rel="stylesheet" th:href="@{/style.css}"/>
+        <!--<link rel="stylesheet" href="../static/style.css"/>-->
+        <script type="text/javascript" th:src="@{/jquery.js}"></script>
+        <script type="text/javascript" th:src="@{/client.js}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="divStyle1">
+                <h1>This is the ABC Consulting Employee Resource Page</h1>
+            </div>
+            <div th:class="divStyle1">
+                <h2>Add Employees to the Roster</h2>
+            </div>
+            <div class="divStyle2">
+                <form>
+                    <input type="text" id="entryFName" placeholder="Enter First Name"/>
+                    <input type="text" id="entryLName" placeholder="Enter Last Name"/>
+                    <input type="number" id="entrySalary" placeholder="Enter Salary"/>
+                    <select name="Position" size="0" id="selectPosition">
+                        <option value="">Choose Position...</option>
+                        <option value="Buyer">Buyer</option>
+                        <option value="Cashier">Cashier</option>
+                        <option value="CustServ">CustServ</option>
+                        <option value="Greeter">Greeter</option>
+                        <option value="HR">HR</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Security">Security</option>
+                    </select>
+                    <button id="btnAdd" th:class="btn" th:classappend="btn-info">Submit Employee</button>
+                </form>
+            </div>
+            <div class="divStyle2">
+                <button id="btnShow" th:class="btn" th:classappend="btn-info">Show Roster</button>
+            </div>
+            <div th:class="divStyle2">
+                <table th:class="table">
+                    <thead>
+                    <tr>
+                        <th>ID #</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>Salary</th>
+                        <th>Position</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tableRoster"></tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
