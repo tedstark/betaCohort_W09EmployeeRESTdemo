@@ -2,14 +2,13 @@
     margin-bottom: 15px;
     border: red solid 1px;
     min-height: 35px;
-    padding: 5px;
     text-align: center;
 }
 .divStyle2 {
     margin-bottom: 10px;
     border: blue solid 1px;
     min-height: 35px;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
 }
 .divStyle3 {
